@@ -14,7 +14,7 @@ public class Main {
 //1. Sukurkite Funkciją kuri priima du int tipo kintamuosius. Juos susumuoja ir atspausdina.
         System.out.println("~~~~~~~~~~~~~~~~~ 1 užduotis ~~~~~~~~~~~~~~~~~");
 
-       sum2Int(5, 3);
+        sum2Int(5, 3);
 
         System.out.println("~~~~~~~~~~~~~~~~~ 2 užduotis ~~~~~~~~~~~~~~~~~");
 //2. Sukurkite Funkciją kuri vadinasi PISq. Funkcija gražina double tipo reikšmę. Reikšmė yra : 9.8596;
@@ -24,12 +24,17 @@ public class Main {
         System.out.println("~~~~~~~~~~~~~~~~~ 3 užduotis ~~~~~~~~~~~~~~~~~");
 //3. Sukurkite Funkciją kuri priima du int tipo kintamuosius. Funkcija gražina skaičių sandaugą.;
 // Gautą reikšmę atspausdinkite.
-        System.out.println(multiply2Int(5,6));
+        System.out.println(multiply2Int(5, 6));
 
         System.out.println("~~~~~~~~~~~~~~~~~ 4 užduotis ~~~~~~~~~~~~~~~~~");
 //4. Sukurkite Funkciją kuri priima int[] tipo kintamąį, prasuka ciklą ir atspausdina kiekvieną skaičių vienoje eilutėje.
+        int[] arr = {5, 8, 9, 6};
+        printArr(arr);
 
-//5. Sukurkite Funkciją kuri priima du int tipo kintamuosius, min ir max reikšmėms nustatyti ir sugeneruoja random int skaičių ir jį gražintų.
+        System.out.println("~~~~~~~~~~~~~~~~~ 5 užduotis ~~~~~~~~~~~~~~~~~");
+//5. Sukurkite Funkciją kuri priima du int tipo kintamuosius, min ir max reikšmėms nustatyti ir sugeneruoja random
+// int skaičių ir jį gražintų.
+
 //6. Sukurkite Funkciją kuri sugeneruotų random int skaičių masyvą ir jį gražintų. Funkcija priima tris int tipo kintamuosius, min, max ir length reikšmėms nustatyti.
 //7. Sukurkite Funkciją kuri panaudotų 6tos užduoties masyvą (priimtų kaip kintamąjį), susumuotų ir gražintų reikšmę.
 //8. Sukurkite Funkciją kuri priimtų 6tos užduoties masyvą ir gražintų jos skaičių vidurkį (double).
@@ -37,7 +42,8 @@ public class Main {
 //10. Sukurkite Funkciją kuri priimtų sakinį kaip kintamąjį ir atspausdintų kiek jame yra raidžių(simbolių) ir tarpų. Sakinys - “Šiandien labai graži diena”. (kodas turi veikti padavus bet kokį sakinį)
 //11. Sukurkite Funkciją kuri priimtų sakinį, jį užkoduotų ir grąžintų. Kodavimas - sakinį apsukame iš kitos pusės. Pvz “Naglis” turi gautis “silgaN”.
     }
-////////////////////////////////////////////TEORIJA///////////////////////////////////////////////////////////////
+
+    ////////////////////////////////////////////TEORIJA///////////////////////////////////////////////////////////////
     // void nieko negrąžina, o kitos grąžina ir nurodo ką (double, string...)
     // priima ir grąžina reikšmę
     public static String formatNameCase(String name) {
@@ -78,12 +84,22 @@ public class Main {
     public static double PISq() {
         return 9.8596;
     }
+
     //3. Sukurkite Funkciją kuri priima du int tipo kintamuosius. Funkcija gražina skaičių sandaugą.;
     // Gautą reikšmę atspausdinkite.
-    public static int multiply2Int(int firstInt, int secondInt){
-        return firstInt*secondInt;
+    public static int multiply2Int(int firstInt, int secondInt) {
+        return firstInt * secondInt;
     }
+
     //4. Sukurkite Funkciją kuri priima int[] tipo kintamąį, prasuka ciklą ir atspausdina kiekvieną skaičių
     // vienoje eilutėje.
+    public static void printArr(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+    //5. Sukurkite Funkciją kuri priima du int tipo kintamuosius, min ir max reikšmėms nustatyti ir sugeneruoja random
+    // int skaičių ir jį gražintų.
 
 }
