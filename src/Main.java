@@ -42,15 +42,16 @@ public class Main {
         int min = 1;
         int max = 10;
         int length = 5;
-        printArr(intArr(min, max, length));
+        int[] arr6 = intArr(min, max, length);
+        printArr(arr6);
 
         System.out.println("~~~~~~~~~~~~~~~~~ 7 užduotis ~~~~~~~~~~~~~~~~~");
 //7. Sukurkite Funkciją kuri panaudotų 6tos užduoties masyvą (priimtų kaip kintamąjį), susumuotų ir gražintų reikšmę.
-        System.out.println(sum6TaskArr(intArr(min, max, length))); //generauoja naują array?
+        System.out.println(sum6TaskArr(arr6));
 
         System.out.println("~~~~~~~~~~~~~~~~~ 8 užduotis ~~~~~~~~~~~~~~~~~");
 //8. Sukurkite Funkciją kuri priimtų 6tos užduoties masyvą ir gražintų jos skaičių vidurkį (double).
-        System.out.println(avg6TaskArr(intArr(min, max, length))); //generauoja naują array?
+        System.out.println(avg6TaskArr(arr6));  //neapvalina teisingai
 
         System.out.println("~~~~~~~~~~~~~~~~~ 9 užduotis ~~~~~~~~~~~~~~~~~");
 //9. Sukurkite Funkciją kuri priimtų du int skaičius ir atspausdintų stačiakampį užpildytą žvaigždutėmis.
