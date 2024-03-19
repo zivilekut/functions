@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Main {
     public static void main(String[] args) {
         sayHi();
@@ -58,11 +60,14 @@ public class Main {
 // Pirmas int - išoriniam ciklui, antras vidiniam.
         rectangle(3,4);
 
+        System.out.println("~~~~~~~~~~~~~~~~~ 10 užduotis ~~~~~~~~~~~~~~~~~");
 //10. Sukurkite Funkciją kuri priimtų sakinį kaip kintamąjį ir atspausdintų kiek jame yra raidžių(simbolių) ir tarpų.
 // Sakinys - “Šiandien labai graži diena”. (kodas turi veikti padavus bet kokį sakinį)
+        String sentence = "Man reikia atostogų.";
+        numberOfChar(sentence);
 
 //11. Sukurkite Funkciją kuri priimtų sakinį, jį užkoduotų ir grąžintų. Kodavimas - sakinį apsukame iš kitos pusės.
-// Pvz “Naglis” turi gautis “silgaN”.
+// Pvz “Naglis” turi gautis “silgaN”
 
     }
 
@@ -117,8 +122,8 @@ public class Main {
     //4. Sukurkite Funkciją kuri priima int[] tipo kintamąį, prasuka ciklą ir atspausdina kiekvieną skaičių
     // vienoje eilutėje.
     public static void printArr(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        for (int j : arr) {
+            System.out.print(j + " ");
         }
         System.out.println();
     }
@@ -170,6 +175,27 @@ public class Main {
             }
             System.out.println();
         }
+    }
+    //10. Sukurkite Funkciją kuri priimtų sakinį kaip kintamąjį ir atspausdintų kiek jame yra raidžių(simbolių) ir tarpų.
+    // Sakinys - “Šiandien labai graži diena”. (kodas turi veikti padavus bet kokį sakinį)
+    public static void numberOfChar (String sentence){
+        char[] characters = sentence.toCharArray();
+
+        int charNumber = 0;
+        int spaceNumber =0;
+        for (char character : characters) {
+
+            if(Objects.equals(character, ' ')){
+                spaceNumber++;
+
+            } else {
+                charNumber++;
+
+            }
+        }
+        System.out.println("Simbolių iš viso: " + sentence.length());
+        System.out.println("Tarpų: " + spaceNumber);
+        System.out.println("Kitų simbolių: " + charNumber);
     }
 
 }
