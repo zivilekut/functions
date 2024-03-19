@@ -39,10 +39,14 @@ public class Main {
         System.out.println("~~~~~~~~~~~~~~~~~ 6 užduotis ~~~~~~~~~~~~~~~~~");
 //6. Sukurkite Funkciją kuri sugeneruotų random int skaičių masyvą ir jį gražintų. Funkcija priima tris int tipo
 // kintamuosius, min, max ir length reikšmėms nustatyti.
-        printArr(intArr(1, 10, 5));
+        int min = 1;
+        int max = 10;
+        int length = 5;
+        printArr(intArr(min, max, length));
 
         System.out.println("~~~~~~~~~~~~~~~~~ 7 užduotis ~~~~~~~~~~~~~~~~~");
 //7. Sukurkite Funkciją kuri panaudotų 6tos užduoties masyvą (priimtų kaip kintamąjį), susumuotų ir gražintų reikšmę.
+        System.out.println(sum6TaskArr(intArr(min, max, length))); //generauoja naują array?
 
 //8. Sukurkite Funkciją kuri priimtų 6tos užduoties masyvą ir gražintų jos skaičių vidurkį (double).
 //9. Sukurkite Funkciją kuri priimtų du int skaičius ir atspausdintų stačiakampį užpildytą žvaigždutėmis.
@@ -128,5 +132,12 @@ public class Main {
     }
 
     //7. Sukurkite Funkciją kuri panaudotų 6tos užduoties masyvą (priimtų kaip kintamąjį), susumuotų ir gražintų reikšmę.
+    public static int sum6TaskArr(int[] array) {
+        int sum = 0;
+        for (int number : array) {
+            sum += number;
+        }
+        return sum;
 
+    }
 }
