@@ -48,9 +48,14 @@ public class Main {
 //7. Sukurkite Funkciją kuri panaudotų 6tos užduoties masyvą (priimtų kaip kintamąjį), susumuotų ir gražintų reikšmę.
         System.out.println(sum6TaskArr(intArr(min, max, length))); //generauoja naują array?
 
+        System.out.println("~~~~~~~~~~~~~~~~~ 8 užduotis ~~~~~~~~~~~~~~~~~");
 //8. Sukurkite Funkciją kuri priimtų 6tos užduoties masyvą ir gražintų jos skaičių vidurkį (double).
+        System.out.println(avg6TaskArr(intArr(min, max, length))); //generauoja naują array?
+
+        System.out.println("~~~~~~~~~~~~~~~~~ 9 užduotis ~~~~~~~~~~~~~~~~~");
 //9. Sukurkite Funkciją kuri priimtų du int skaičius ir atspausdintų stačiakampį užpildytą žvaigždutėmis.
 // Pirmas int - išoriniam ciklui, antras vidiniam.
+
 //10. Sukurkite Funkciją kuri priimtų sakinį kaip kintamąjį ir atspausdintų kiek jame yra raidžių(simbolių) ir tarpų.
 // Sakinys - “Šiandien labai graži diena”. (kodas turi veikti padavus bet kokį sakinį)
 //11. Sukurkite Funkciją kuri priimtų sakinį, jį užkoduotų ir grąžintų. Kodavimas - sakinį apsukame iš kitos pusės.
@@ -138,6 +143,14 @@ public class Main {
             sum += number;
         }
         return sum;
+    }
 
+    //8. Sukurkite Funkciją kuri priimtų 6tos užduoties masyvą ir gražintų jos skaičių vidurkį (double).
+    public static double avg6TaskArr(int[] array) {
+        int sum = 0;
+        for (int number : array) {
+            sum += number;
+        }
+        return sum / array.length;
     }
 }
