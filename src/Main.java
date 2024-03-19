@@ -34,8 +34,11 @@ public class Main {
         System.out.println("~~~~~~~~~~~~~~~~~ 5 užduotis ~~~~~~~~~~~~~~~~~");
 //5. Sukurkite Funkciją kuri priima du int tipo kintamuosius, min ir max reikšmėms nustatyti ir sugeneruoja random
 // int skaičių ir jį gražintų.
+        System.out.println(rndNumber(2,6));
 
-//6. Sukurkite Funkciją kuri sugeneruotų random int skaičių masyvą ir jį gražintų. Funkcija priima tris int tipo kintamuosius, min, max ir length reikšmėms nustatyti.
+        System.out.println("~~~~~~~~~~~~~~~~~ 6 užduotis ~~~~~~~~~~~~~~~~~");
+//6. Sukurkite Funkciją kuri sugeneruotų random int skaičių masyvą ir jį gražintų. Funkcija priima tris int tipo
+// kintamuosius, min, max ir length reikšmėms nustatyti.
 //7. Sukurkite Funkciją kuri panaudotų 6tos užduoties masyvą (priimtų kaip kintamąjį), susumuotų ir gražintų reikšmę.
 //8. Sukurkite Funkciją kuri priimtų 6tos užduoties masyvą ir gražintų jos skaičių vidurkį (double).
 //9. Sukurkite Funkciją kuri priimtų du int skaičius ir atspausdintų stačiakampį užpildytą žvaigždutėmis. Pirmas int - išoriniam ciklui, antras vidiniam.
@@ -99,7 +102,14 @@ public class Main {
         }
         System.out.println();
     }
+
     //5. Sukurkite Funkciją kuri priima du int tipo kintamuosius, min ir max reikšmėms nustatyti ir sugeneruoja random
     // int skaičių ir jį gražintų.
+    public static int rndNumber(int min, int max){
+        return (int) (min + Math.round( Math.random() * (max - min)));
+    }
+
+    //6. Sukurkite Funkciją kuri sugeneruotų random int skaičių masyvą ir jį gražintų. Funkcija priima tris int tipo
+    // kintamuosius, min, max ir length reikšmėms nustatyti.
 
 }
