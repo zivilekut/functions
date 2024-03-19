@@ -58,7 +58,7 @@ public class Main {
         System.out.println("~~~~~~~~~~~~~~~~~ 9 užduotis ~~~~~~~~~~~~~~~~~");
 //9. Sukurkite Funkciją kuri priimtų du int skaičius ir atspausdintų stačiakampį užpildytą žvaigždutėmis.
 // Pirmas int - išoriniam ciklui, antras vidiniam.
-        rectangle(3,4);
+        rectangle(3, 4);
 
         System.out.println("~~~~~~~~~~~~~~~~~ 10 užduotis ~~~~~~~~~~~~~~~~~");
 //10. Sukurkite Funkciją kuri priimtų sakinį kaip kintamąjį ir atspausdintų kiek jame yra raidžių(simbolių) ir tarpų.
@@ -66,9 +66,12 @@ public class Main {
         String sentence = "Man reikia atostogų.";
         numberOfChar(sentence);
 
+        System.out.println("~~~~~~~~~~~~~~~~~ 11 užduotis ~~~~~~~~~~~~~~~~~");
 //11. Sukurkite Funkciją kuri priimtų sakinį, jį užkoduotų ir grąžintų. Kodavimas - sakinį apsukame iš kitos pusės.
 // Pvz “Naglis” turi gautis “silgaN”
 
+        String sentence2 = "Feliz Navidad";
+        System.out.println(reverse(sentence2));
     }
 
     ////////////////////////////////////////////TEORIJA///////////////////////////////////////////////////////////////
@@ -164,7 +167,7 @@ public class Main {
 
     //9. Sukurkite Funkciją kuri priimtų du int skaičius ir atspausdintų stačiakampį užpildytą žvaigždutėmis.
     // Pirmas int - išoriniam ciklui, antras vidiniam.
-    public static void rectangle (int rows, int columns){
+    public static void rectangle(int rows, int columns) {
         String[][] rectangle = new String[rows][columns];
 
         String asterisk = "* ";
@@ -176,16 +179,17 @@ public class Main {
             System.out.println();
         }
     }
+
     //10. Sukurkite Funkciją kuri priimtų sakinį kaip kintamąjį ir atspausdintų kiek jame yra raidžių(simbolių) ir tarpų.
     // Sakinys - “Šiandien labai graži diena”. (kodas turi veikti padavus bet kokį sakinį)
-    public static void numberOfChar (String sentence){
+    public static void numberOfChar(String sentence) {
         char[] characters = sentence.toCharArray();
 
         int charNumber = 0;
-        int spaceNumber =0;
+        int spaceNumber = 0;
         for (char character : characters) {
 
-            if(Objects.equals(character, ' ')){
+            if (Objects.equals(character, ' ')) {
                 spaceNumber++;
 
             } else {
@@ -196,6 +200,17 @@ public class Main {
         System.out.println("Simbolių iš viso: " + sentence.length());
         System.out.println("Tarpų: " + spaceNumber);
         System.out.println("Kitų simbolių: " + charNumber);
+    }
+
+    //11. Sukurkite Funkciją kuri priimtų sakinį, jį užkoduotų ir grąžintų. Kodavimas - sakinį apsukame iš kitos pusės.
+    // Pvz “Naglis” turi gautis “silgaN”
+    public static StringBuilder reverse(String sentence) {
+
+        StringBuilder reverse = new StringBuilder();
+        reverse.append(sentence);
+        reverse.reverse();
+
+        return reverse;
     }
 
 }
