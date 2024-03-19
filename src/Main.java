@@ -9,8 +9,29 @@ public class Main {
         System.out.println(result);
         System.out.println(simPI());
         System.out.println(formatNameCase("nAGLIS"));
+
+        System.out.println("~~~~~~~~~~~~~~~~~Lengvesni~~~~~~~~~~~~~~~~~");
+        System.out.println("~~~~~~~~~~~~~~~~~ 1 užduotis ~~~~~~~~~~~~~~~~~");
+//1. Sukurkite Funkciją kuri priima du int tipo kintamuosius. Juos susumuoja ir atspausdina.
+        System.out.println(sum2Int(5, 3));
+
+        System.out.println("~~~~~~~~~~~~~~~~~ 2 užduotis ~~~~~~~~~~~~~~~~~");
+//2. Sukurkite Funkciją kuri vadinasi PISq. Funkcija gražina double tipo reikšmę. Reikšmė yra : 9.8596;
+// Gautą reikšmę atspausdinkite.
+        System.out.println(PISq());
+
+//3. Sukurkite Funkciją kuri priima du int tipo kintamuosius. Funkcija gražina skaičių sandaugą.; Gautą reikšmę atspausdinkite.
+//4. Sukurkite Funkciją kuri priima int[] tipo kintamąį, prasuka ciklą ir atspausdina kiekvieną skaičių vienoje eilutėje.
+//5. Sukurkite Funkciją kuri priima du int tipo kintamuosius, min ir max reikšmėms nustatyti ir sugeneruoja random int skaičių ir jį gražintų.
+//6. Sukurkite Funkciją kuri sugeneruotų random int skaičių masyvą ir jį gražintų. Funkcija priima tris int tipo kintamuosius, min, max ir length reikšmėms nustatyti.
+//7. Sukurkite Funkciją kuri panaudotų 6tos užduoties masyvą (priimtų kaip kintamąjį), susumuotų ir gražintų reikšmę.
+//8. Sukurkite Funkciją kuri priimtų 6tos užduoties masyvą ir gražintų jos skaičių vidurkį (double).
+//9. Sukurkite Funkciją kuri priimtų du int skaičius ir atspausdintų stačiakampį užpildytą žvaigždutėmis. Pirmas int - išoriniam ciklui, antras vidiniam.
+//10. Sukurkite Funkciją kuri priimtų sakinį kaip kintamąjį ir atspausdintų kiek jame yra raidžių(simbolių) ir tarpų. Sakinys - “Šiandien labai graži diena”. (kodas turi veikti padavus bet kokį sakinį)
+//11. Sukurkite Funkciją kuri priimtų sakinį, jį užkoduotų ir grąžintų. Kodavimas - sakinį apsukame iš kitos pusės. Pvz “Naglis” turi gautis “silgaN”.
     }
 
+    // void nieko negrąžina, o kitos grąžina ir nurodo ką (double, string...)
     // priima ir grąžina reikšmę
     public static String formatNameCase(String name) {
         return name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
@@ -38,4 +59,17 @@ public class Main {
     public static void sayHiTo(String name) {
         System.out.println("Labas " + name + "!");
     }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //1. Sukurkite Funkciją kuri priima du int tipo kintamuosius. Juos susumuoja ir atspausdina.
+    public static int sum2Int(int firstInt, int secondInt) {
+        return firstInt + secondInt;
+    }
+
+    //2. Sukurkite Funkciją kuri vadinasi PISq. Funkcija gražina double tipo reikšmę. Reikšmė yra : 9.8596;
+    // Gautą reikšmę atspausdinkite.
+    public static double PISq() {
+        return 9.8596;
+    }
+
 }
