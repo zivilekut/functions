@@ -87,7 +87,7 @@ public class Main {
         System.out.println("~~~~~~~~~~~~~~~~~ 3 užduotis ~~~~~~~~~~~~~~~~~");
 //3. Parašykite funkciją, kuri skaičiuotų, ir gražintų iš kiek sveikų skaičių jos argumentas dalijasi be liekanos
 // (išskyrus vienetą ir patį save).
-        System.out.println(divisionWithoutRemainder(25));
+        System.out.println(divisionWithoutRemainder(2));
 
         System.out.println("~~~~~~~~~~~~~~~~~ 4 užduotis ~~~~~~~~~~~~~~~~~");
 //4. Sugeneruokite masyvą iš 100 elementų, kurio reikšmės atsitiktiniai skaičiai nuo 33 iki 77. Išrūšiuokite masyvą
@@ -284,25 +284,28 @@ public class Main {
     //3. Parašykite funkciją, kuri skaičiuotų, ir gražintų iš kiek sveikų skaičių jos argumentas dalijasi be liekanos
     // (išskyrus vienetą ir patį save).
     public static int divisionWithoutRemainder(int number) {
-        int divisionsWithoutRemainder = 0;
-        int i = 1;
-        while (i < number) {
-            for (i = 2; i < number; i++) {
+        if (number <= 1) {
+            return 0;
+        }
 
-                if (number % i == 0) {
-                    divisionsWithoutRemainder++;
-                }
+        int divisionsWithoutRemainder = 0;
+
+        for (int divisor = 2; divisor < number; divisor++) {
+            if (number % divisor == 0) {
+                divisionsWithoutRemainder++;
             }
         }
+
         return divisionsWithoutRemainder;
     }
+
     //4. Sugeneruokite masyvą iš 100 elementų, kurio reikšmės atsitiktiniai skaičiai nuo 33 iki 77. Išrūšiuokite masyvą
     // pagal daliklių be liekanos kiekį mažėjimo tvarka, panaudodami trečio uždavinio funkciją.
-    public static void sortArr(){
-        int[] arr = intArr(33,77,100);
+    public static void sortArr() {
+        int[] arr = intArr(33, 77, 100);
         printArr(arr);
         for (int number : arr) {
-            System.out.print(divisionWithoutRemainder(number)+ "  ");
+            System.out.print(divisionWithoutRemainder(number) + "  ");
 
         }
     }
