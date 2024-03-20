@@ -82,9 +82,13 @@ public class Main {
         System.out.println("~~~~~~~~~~~~~~~~~ 2 užduotis ~~~~~~~~~~~~~~~~~");
 //2. Sugeneruokite atsitiktinį stringą iš raidžių ir skaičių (10 simbolių). Atspausdinkite simbolius stulpeliu. Jei
 // tai skaičius apgaubkite “ [ 7 ]”. Jei skaičiai eina keli iš eilės, apgaubkite juos kartu. [75].
-        randomString();
+        randomStringSplit();
+
+        System.out.println("~~~~~~~~~~~~~~~~~ 3 užduotis ~~~~~~~~~~~~~~~~~");
 //3. Parašykite funkciją, kuri skaičiuotų, ir gražintų iš kiek sveikų skaičių jos argumentas dalijasi be liekanos
 // (išskyrus vienetą ir patį save).
+        System.out.println(divisionWithoutRemainder(25));
+
 //4. Sugeneruokite masyvą iš 100 elementų, kurio reikšmės atsitiktiniai skaičiai nuo 33 iki 77. Išrūšiuokite masyvą
 // pagal daliklių be liekanos kiekį mažėjimo tvarka, panaudodami trečio uždavinio funkciją.
 //5. Sugeneruokite masyvą iš 100 elementų, kurio reikšmės atsitiktiniai skaičiai nuo 333 iki 777. Naudodami 3 uždavinio
@@ -166,7 +170,7 @@ public class Main {
     //5. Sukurkite Funkciją kuri priima du int tipo kintamuosius, min ir max reikšmėms nustatyti ir sugeneruoja random
     // int skaičių ir jį gražintų.
     public static int rndNumber(int min, int max) {
-        return  min + (int)Math.round(Math.random() * (max - min));
+        return min + (int) Math.round(Math.random() * (max - min));
     }
 
     //6. Sukurkite Funkciją kuri sugeneruotų random int skaičių masyvą ir jį gražintų. Funkcija priima tris int tipo
@@ -174,7 +178,7 @@ public class Main {
     public static int[] intArr(int min, int max, int length) {
         int[] array = new int[length];
         for (int i = 0; i < length; i++) {
-            array[i] = rndNumber(min,max);
+            array[i] = rndNumber(min, max);
         }
         return array;
     }
@@ -260,12 +264,12 @@ public class Main {
         return text;
     }
 
-    public static void randomString() {
+    public static void randomStringSplit() {
         char[] characters = generateRndStr(10).toCharArray();
         int consecutiveNumbers = 0;
-        for(char character : characters){
-            if (character == '0' || character == '1' ||character == '2' ||character == '3' ||character == '4' ||
-                    character == '5' ||character == '6' ||character == '7' ||character == '8' ||character == '9'){
+        for (char character : characters) {
+            if (character == '0' || character == '1' || character == '2' || character == '3' || character == '4' ||
+                    character == '5' || character == '6' || character == '7' || character == '8' || character == '9') {
                 System.out.println("[" + character + "]");
 
             } else {
@@ -273,4 +277,21 @@ public class Main {
             }
         }
     }
+
+    //3. Parašykite funkciją, kuri skaičiuotų, ir gražintų iš kiek sveikų skaičių jos argumentas dalijasi be liekanos
+    // (išskyrus vienetą ir patį save).
+    public static int divisionWithoutRemainder(int number) {
+        int divisionsWithoutRemainder = 0;
+        int i = 1;
+        while (i < number) {
+            for (i = 2; i < number; i++) {
+
+                if (number % i == 0) {
+                    divisionsWithoutRemainder++;
+                }
+            }
+        }
+        return divisionsWithoutRemainder;
+    }
+
 }
