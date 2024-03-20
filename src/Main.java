@@ -94,8 +94,11 @@ public class Main {
 // pagal daliklių be liekanos kiekį mažėjimo tvarka, panaudodami trečio uždavinio funkciją.
         sortArr();
 
+        System.out.println("~~~~~~~~~~~~~~~~~ 5 užduotis ~~~~~~~~~~~~~~~~~");
 //5. Sugeneruokite masyvą iš 100 elementų, kurio reikšmės atsitiktiniai skaičiai nuo 333 iki 777. Naudodami 3 uždavinio
 // funkciją iš masyvo suskaičiuokite kiek yra pirminių skaičių.
+        primaryNumbers();
+
 //6. (NEveikia, nedaryti) Sugeneruokite atsitiktinio (nuo 10 iki 20) ilgio masyvą, kurio visi, išskyrus paskutinį,
 // elementai yra atsitiktiniai skaičiai nuo 0 iki 10, o paskutinis masyvas, kuris generuojamas pagal tokią pat salygą
 // kaip ir pirmasis masyvas. Viską pakartokite atsitiktinį nuo 10 iki 30  kiekį kartų. Paskutinio masyvo paskutinis
@@ -303,11 +306,29 @@ public class Main {
     // pagal daliklių be liekanos kiekį mažėjimo tvarka, panaudodami trečio uždavinio funkciją.
     public static void sortArr() {
         int[] arr = intArr(33, 77, 100);
+        System.out.println("Atsitiktiniai skaičiai: ");
         printArr(arr);
+
         for (int number : arr) {
-            System.out.print(divisionWithoutRemainder(number) + "  ");
 
         }
+
+    }
+
+    //5. Sugeneruokite masyvą iš 100 elementų, kurio reikšmės atsitiktiniai skaičiai nuo 333 iki 777. Naudodami 3 uždavinio
+    // funkciją iš masyvo suskaičiuokite kiek yra pirminių skaičių.
+    public static void primaryNumbers() {
+        int[] arr = intArr(333, 777, 100);
+        System.out.println("Atsitiktiniai skaičiai: ");
+        printArr(arr);
+        int primityNumbersCounter = 0;
+        for (int number : arr) {
+            if (divisionWithoutRemainder(number) == 0) {
+                primityNumbersCounter++;
+            }
+
+        }
+        System.out.println("Iš jų " + primityNumbersCounter + " yra pirminiai.");
     }
 
 }
