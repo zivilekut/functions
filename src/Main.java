@@ -282,13 +282,21 @@ public class Main {
             char currentChar = txt.charAt(i);
             if (Character.isDigit((currentChar))) {
                 number += currentChar;
-                System.out.println("[" + number + "]");
             } else {
+
+                if (number.length() > 0) {
+                    System.out.println("[" + number + "]");
+
+                }
                 System.out.println(txt.charAt(i));
                 number = "";
             }
 
+        } if (number.length() > 0) {
+            System.out.println("[" + number + "]");
+
         }
+
 
     }
 
