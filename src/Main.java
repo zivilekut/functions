@@ -166,7 +166,7 @@ public class Main {
     //5. Sukurkite Funkciją kuri priima du int tipo kintamuosius, min ir max reikšmėms nustatyti ir sugeneruoja random
     // int skaičių ir jį gražintų.
     public static int rndNumber(int min, int max) {
-        return (int) (min + Math.round(Math.random() * (max - min)));
+        return  min + (int)Math.round(Math.random() * (max - min));
     }
 
     //6. Sukurkite Funkciją kuri sugeneruotų random int skaičių masyvą ir jį gražintų. Funkcija priima tris int tipo
@@ -174,7 +174,7 @@ public class Main {
     public static int[] intArr(int min, int max, int length) {
         int[] array = new int[length];
         for (int i = 0; i < length; i++) {
-            array[i] = (int) (min + Math.round(Math.random() * (max - min)));
+            array[i] = rndNumber(min,max);
         }
         return array;
     }
@@ -190,11 +190,8 @@ public class Main {
 
     //8. Sukurkite Funkciją kuri priimtų 6tos užduoties masyvą ir gražintų jos skaičių vidurkį (double).
     public static double avg6TaskArr(int[] array) {
-        double sum = 0;
-        for (int number : array) {
-            sum += number;
-        }
-        return sum / array.length;
+
+        return sum6TaskArr(array) / (double) array.length;
     }
 
     //9. Sukurkite Funkciją kuri priimtų du int skaičius ir atspausdintų stačiakampį užpildytą žvaigždutėmis.
