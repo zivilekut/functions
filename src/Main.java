@@ -82,7 +82,11 @@ public class Main {
         System.out.println("~~~~~~~~~~~~~~~~~ 2 užduotis ~~~~~~~~~~~~~~~~~");
 //2. Sugeneruokite atsitiktinį stringą iš raidžių ir skaičių (10 simbolių). Atspausdinkite simbolius stulpeliu. Jei
 // tai skaičius apgaubkite “ [ 7 ]”. Jei skaičiai eina keli iš eilės, apgaubkite juos kartu. [75].
-        randomStringSplit();
+        int stringLength = 10;
+        String text = generateRndStr(stringLength);
+        System.out.println(text);
+        randomStringSplit(text);
+
 
         System.out.println("~~~~~~~~~~~~~~~~~ 3 užduotis ~~~~~~~~~~~~~~~~~");
 //3. Parašykite funkciją, kuri skaičiuotų, ir gražintų iš kiek sveikų skaičių jos argumentas dalijasi be liekanos
@@ -105,11 +109,12 @@ public class Main {
 // elementas yra lygus 0;
 //7. (NEveikia, nedaryti)Suskaičiuokite šešto uždavinio elementų, kurie nėra masyvai, sumą. Skaičiuoti reikia visuose
 // masyvuose ir submasyvuose.
+
 //8. Sugeneruokite masyvą iš trijų elementų, kurie yra atsitiktiniai skaičiai nuo 1 iki 33. Jeigu tarp trijų paskutinių
 // elementų yra nors vienas ne pirminis skaičius, prie masyvo pridėkite dar vieną elementą- atsitiktinį skaičių nuo 1
 // iki 33. Vėl patikrinkite pradinę sąlygą ir jeigu reikia pridėkite dar vieną elementą. Kartokite, kol sąlyga
 // nereikalaus pridėti elemento.
-//10. Sugeneruokite masyvą iš 10 elementų, kurie yra masyvai iš 10 elementų, kurie yra atsitiktiniai skaičiai nuo 1
+//9. Sugeneruokite masyvą iš 10 elementų, kurie yra masyvai iš 10 elementų, kurie yra atsitiktiniai skaičiai nuo 1
 // iki 100. Jeigu tokio didelio masyvo (ne atskirai mažesnių) pirminių skaičių vidurkis mažesnis už 70, suraskite
 // masyve mažiausią skaičių (nebūtinai pirminį) ir prie jo pridėkite 3. Vėl paskaičiuokite masyvo pirminių skaičių
 // vidurkį ir jeigu mažesnis nei 70 viską kartokite.
@@ -270,18 +275,21 @@ public class Main {
         return text;
     }
 
-    public static void randomStringSplit() {
-        char[] characters = generateRndStr(10).toCharArray();
-        int consecutiveNumbers = 0;
-        for (char character : characters) {
-            if (character == '0' || character == '1' || character == '2' || character == '3' || character == '4' ||
-                    character == '5' || character == '6' || character == '7' || character == '8' || character == '9') {
-                System.out.println("[" + character + "]");
+    public static void randomStringSplit(String txt) {
+        String number = "";
 
+        for (int i = 0; i < txt.length(); i++) {
+            char currentChar = txt.charAt(i);
+            if (Character.isDigit((currentChar))) {
+                number += currentChar;
+                System.out.println("[" + number + "]");
             } else {
-                System.out.println(character);
+                System.out.println(txt.charAt(i));
+                number = "";
             }
+
         }
+
     }
 
     //3. Parašykite funkciją, kuri skaičiuotų, ir gražintų iš kiek sveikų skaičių jos argumentas dalijasi be liekanos
