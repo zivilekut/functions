@@ -72,6 +72,38 @@ public class Main {
 
         String sentence2 = "Feliz Navidad";
         System.out.println(reverse(sentence2));
+
+        System.out.println("~~~~~~~~~~~~~~~~~Sunkesni~~~~~~~~~~~~~~~~~");
+        System.out.println("~~~~~~~~~~~~~~~~~ 1 užduotis ~~~~~~~~~~~~~~~~~");
+//1. Parašykite funkciją, kurios argumentas būtų tekstas, kuris būtų atspausdinamas konsolėje pridedant “---” pradžioje
+// ir gale. PVZ (---labas---)
+        textWithHyphens("labas");
+
+        System.out.println("~~~~~~~~~~~~~~~~~ 2 užduotis ~~~~~~~~~~~~~~~~~");
+//2. Sugeneruokite atsitiktinį stringą iš raidžių ir skaičių (10 simbolių). Atspausdinkite simbolius stulpeliu. Jei
+// tai skaičius apgaubkite “ [ 7 ]”. Jei skaičiai eina keli iš eilės, apgaubkite juos kartu. [75].
+        randomString();
+//3. Parašykite funkciją, kuri skaičiuotų, ir gražintų iš kiek sveikų skaičių jos argumentas dalijasi be liekanos
+// (išskyrus vienetą ir patį save).
+//4. Sugeneruokite masyvą iš 100 elementų, kurio reikšmės atsitiktiniai skaičiai nuo 33 iki 77. Išrūšiuokite masyvą
+// pagal daliklių be liekanos kiekį mažėjimo tvarka, panaudodami trečio uždavinio funkciją.
+//5. Sugeneruokite masyvą iš 100 elementų, kurio reikšmės atsitiktiniai skaičiai nuo 333 iki 777. Naudodami 3 uždavinio
+// funkciją iš masyvo suskaičiuokite kiek yra pirminių skaičių.
+//6. (NEveikia, nedaryti) Sugeneruokite atsitiktinio (nuo 10 iki 20) ilgio masyvą, kurio visi, išskyrus paskutinį,
+// elementai yra atsitiktiniai skaičiai nuo 0 iki 10, o paskutinis masyvas, kuris generuojamas pagal tokią pat salygą
+// kaip ir pirmasis masyvas. Viską pakartokite atsitiktinį nuo 10 iki 30  kiekį kartų. Paskutinio masyvo paskutinis
+// elementas yra lygus 0;
+//7. (NEveikia, nedaryti)Suskaičiuokite šešto uždavinio elementų, kurie nėra masyvai, sumą. Skaičiuoti reikia visuose
+// masyvuose ir submasyvuose.
+//8. Sugeneruokite masyvą iš trijų elementų, kurie yra atsitiktiniai skaičiai nuo 1 iki 33. Jeigu tarp trijų paskutinių
+// elementų yra nors vienas ne pirminis skaičius, prie masyvo pridėkite dar vieną elementą- atsitiktinį skaičių nuo 1
+// iki 33. Vėl patikrinkite pradinę sąlygą ir jeigu reikia pridėkite dar vieną elementą. Kartokite, kol sąlyga
+// nereikalaus pridėti elemento.
+//10. Sugeneruokite masyvą iš 10 elementų, kurie yra masyvai iš 10 elementų, kurie yra atsitiktiniai skaičiai nuo 1
+// iki 100. Jeigu tokio didelio masyvo (ne atskirai mažesnių) pirminių skaičių vidurkis mažesnis už 70, suraskite
+// masyve mažiausią skaičių (nebūtinai pirminį) ir prie jo pridėkite 3. Vėl paskaičiuokite masyvo pirminių skaičių
+// vidurkį ir jeigu mažesnis nei 70 viską kartokite.
+
     }
 
     ////////////////////////////////////////////TEORIJA///////////////////////////////////////////////////////////////
@@ -212,5 +244,36 @@ public class Main {
 
         return reverse;
     }
+    //////////////////////////////////////////SUNKESNI///////////////////////////////////////////////////////////
 
+    //1. Parašykite funkciją, kurios argumentas būtų tekstas, kuris būtų atspausdinamas konsolėje pridedant “---” pradžioje
+    // ir gale. PVZ (---labas---)
+    public static void textWithHyphens(String text) {
+        System.out.println("---" + text + "---");
+    }
+
+    //2. Sugeneruokite atsitiktinį stringą iš raidžių ir skaičių (10 simbolių). Atspausdinkite simbolius stulpeliu. Jei
+    // tai skaičius apgaubkite “ [ 7 ]”. Jei skaičiai eina keli iš eilės, apgaubkite juos kartu. [75].
+    public static String generateRndStr(int length) {
+        String symbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZ12345678901234567890";
+        String text = "";
+        for (int i = 0; i < length; i++) {
+            text += symbols.charAt((int) (Math.random() * symbols.length()));
+        }
+        return text;
+    }
+
+    public static void randomString() {
+        char[] characters = generateRndStr(10).toCharArray();
+        int consecutiveNumbers = 0;
+        for(char character : characters){
+            if (character == '0' || character == '1' ||character == '2' ||character == '3' ||character == '4' ||
+                    character == '5' ||character == '6' ||character == '7' ||character == '8' ||character == '9'){
+                System.out.println("[" + character + "]");
+
+            } else {
+                System.out.println(character);
+            }
+        }
+    }
 }
