@@ -89,8 +89,11 @@ public class Main {
 // (išskyrus vienetą ir patį save).
         System.out.println(divisionWithoutRemainder(25));
 
+        System.out.println("~~~~~~~~~~~~~~~~~ 4 užduotis ~~~~~~~~~~~~~~~~~");
 //4. Sugeneruokite masyvą iš 100 elementų, kurio reikšmės atsitiktiniai skaičiai nuo 33 iki 77. Išrūšiuokite masyvą
 // pagal daliklių be liekanos kiekį mažėjimo tvarka, panaudodami trečio uždavinio funkciją.
+        sortArr();
+
 //5. Sugeneruokite masyvą iš 100 elementų, kurio reikšmės atsitiktiniai skaičiai nuo 333 iki 777. Naudodami 3 uždavinio
 // funkciją iš masyvo suskaičiuokite kiek yra pirminių skaičių.
 //6. (NEveikia, nedaryti) Sugeneruokite atsitiktinio (nuo 10 iki 20) ilgio masyvą, kurio visi, išskyrus paskutinį,
@@ -292,6 +295,16 @@ public class Main {
             }
         }
         return divisionsWithoutRemainder;
+    }
+    //4. Sugeneruokite masyvą iš 100 elementų, kurio reikšmės atsitiktiniai skaičiai nuo 33 iki 77. Išrūšiuokite masyvą
+    // pagal daliklių be liekanos kiekį mažėjimo tvarka, panaudodami trečio uždavinio funkciją.
+    public static void sortArr(){
+        int[] arr = intArr(33,77,100);
+        printArr(arr);
+        for (int number : arr) {
+            System.out.print(divisionWithoutRemainder(number)+ "  ");
+
+        }
     }
 
 }
