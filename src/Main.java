@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Objects;
 
 public class Main {
@@ -294,7 +295,8 @@ public class Main {
                 number = "";
             }
 
-        } if (number.length() > 0) {
+        }
+        if (number.length() > 0) {
             System.out.println("[" + number + "]");
 
         }
@@ -333,6 +335,18 @@ public class Main {
         }
         System.out.println();
 
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - i - 1; j++) {
+                if (divisionWithoutRemainder(arr[j + 1]) > divisionWithoutRemainder(arr[j])) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+
+        System.out.println("Sorted Array: ");
+        printArr(arr);
     }
 
     //5. Sugeneruokite masyvą iš 100 elementų, kurio reikšmės atsitiktiniai skaičiai nuo 333 iki 777. Naudodami 3 uždavinio
@@ -350,11 +364,12 @@ public class Main {
         }
         System.out.println("Iš jų " + primiryNumbersCounter + " yra pirminiai.");
     }
+
     //8. Sugeneruokite masyvą iš trijų elementų, kurie yra atsitiktiniai skaičiai nuo 1 iki 33. Jeigu tarp trijų paskutinių
     // elementų yra nors vienas ne pirminis skaičius, prie masyvo pridėkite dar vieną elementą- atsitiktinį skaičių nuo 1
     // iki 33. Vėl patikrinkite pradinę sąlygą ir jeigu reikia pridėkite dar vieną elementą. Kartokite, kol sąlyga
     // nereikalaus pridėti elemento.
-    public static void  primaryArr(){
+    public static void primaryArr() {
         int[] arr = intArr(1, 33, 3);
         System.out.println("Array: ");
         printArr(arr);
