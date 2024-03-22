@@ -97,6 +97,7 @@ public class Main {
 //4. Sugeneruokite masyvą iš 100 elementų, kurio reikšmės atsitiktiniai skaičiai nuo 33 iki 77. Išrūšiuokite masyvą
 // pagal daliklių be liekanos kiekį mažėjimo tvarka, panaudodami trečio uždavinio funkciją.
         sortArr();
+        System.out.println();
 
         System.out.println("~~~~~~~~~~~~~~~~~ 5 užduotis ~~~~~~~~~~~~~~~~~");
 //5. Sugeneruokite masyvą iš 100 elementų, kurio reikšmės atsitiktiniai skaičiai nuo 333 iki 777. Naudodami 3 uždavinio
@@ -109,11 +110,12 @@ public class Main {
 // elementas yra lygus 0;
 //7. (NEveikia, nedaryti)Suskaičiuokite šešto uždavinio elementų, kurie nėra masyvai, sumą. Skaičiuoti reikia visuose
 // masyvuose ir submasyvuose.
-
+        System.out.println("~~~~~~~~~~~~~~~~~ 8 užduotis ~~~~~~~~~~~~~~~~~");
 //8. Sugeneruokite masyvą iš trijų elementų, kurie yra atsitiktiniai skaičiai nuo 1 iki 33. Jeigu tarp trijų paskutinių
 // elementų yra nors vienas ne pirminis skaičius, prie masyvo pridėkite dar vieną elementą- atsitiktinį skaičių nuo 1
 // iki 33. Vėl patikrinkite pradinę sąlygą ir jeigu reikia pridėkite dar vieną elementą. Kartokite, kol sąlyga
 // nereikalaus pridėti elemento.
+        primaryArr();
 //9. Sugeneruokite masyvą iš 10 elementų, kurie yra masyvai iš 10 elementų, kurie yra atsitiktiniai skaičiai nuo 1
 // iki 100. Jeigu tokio didelio masyvo (ne atskirai mažesnių) pirminių skaičių vidurkis mažesnis už 70, suraskite
 // masyve mažiausią skaičių (nebūtinai pirminį) ir prie jo pridėkite 3. Vėl paskaičiuokite masyvo pirminių skaičių
@@ -325,9 +327,11 @@ public class Main {
         System.out.println("Atsitiktiniai skaičiai: ");
         printArr(arr);
 
+        System.out.println("Jų daliklių skaičius: ");
         for (int number : arr) {
-
+            System.out.print(divisionWithoutRemainder(number) + " ");
         }
+        System.out.println();
 
     }
 
@@ -337,14 +341,24 @@ public class Main {
         int[] arr = intArr(333, 777, 100);
         System.out.println("Atsitiktiniai skaičiai: ");
         printArr(arr);
-        int primityNumbersCounter = 0;
+        int primiryNumbersCounter = 0;
         for (int number : arr) {
             if (divisionWithoutRemainder(number) == 0) {
-                primityNumbersCounter++;
+                primiryNumbersCounter++;
             }
 
         }
-        System.out.println("Iš jų " + primityNumbersCounter + " yra pirminiai.");
+        System.out.println("Iš jų " + primiryNumbersCounter + " yra pirminiai.");
+    }
+    //8. Sugeneruokite masyvą iš trijų elementų, kurie yra atsitiktiniai skaičiai nuo 1 iki 33. Jeigu tarp trijų paskutinių
+    // elementų yra nors vienas ne pirminis skaičius, prie masyvo pridėkite dar vieną elementą- atsitiktinį skaičių nuo 1
+    // iki 33. Vėl patikrinkite pradinę sąlygą ir jeigu reikia pridėkite dar vieną elementą. Kartokite, kol sąlyga
+    // nereikalaus pridėti elemento.
+    public static void  primaryArr(){
+        int[] arr = intArr(1, 33, 3);
+        System.out.println("Array: ");
+        printArr(arr);
+
     }
 
 }
