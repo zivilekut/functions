@@ -373,7 +373,21 @@ public class Main {
         int[] arr = intArr(1, 33, 3);
         System.out.println("Array: ");
         printArr(arr);
-
+        while ((divisionWithoutRemainder(arr[arr.length - 1]) != 0) ||
+                (divisionWithoutRemainder(arr[arr.length - 2]) != 0) ||
+                (divisionWithoutRemainder(arr[arr.length - 3]) != 0)) {
+            if (divisionWithoutRemainder(arr[arr.length - 1]) != 0) {
+                arr[arr.length - 1] = rndNumber(1, 33);
+            }
+            if (divisionWithoutRemainder(arr[arr.length - 2]) != 0) {
+                arr[arr.length - 2] = rndNumber(1, 33);
+            }
+            if (divisionWithoutRemainder(arr[arr.length - 3]) != 0) {
+                arr[arr.length - 3] = rndNumber(1, 33);
+            }
+            System.out.println("Updated array: ");
+            printArr(arr);
+        }
     }
 
 }
